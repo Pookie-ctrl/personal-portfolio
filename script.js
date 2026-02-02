@@ -32,4 +32,37 @@ window.addEventListener('scroll', checkFadeIn);
 
 document.addEventListener('DOMContentLoaded', checkFadeIn);
 
+const navLinks = document.querySelectorAll('.navlinks a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+const darkModeBtn = document.getElementById('darkModeBtn');
+darkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+  let scrollY = window.scrollY;
+  sections.forEach(section => {
+    if(scrollY >= section.offsetTop - 100 && scrollY < section.offsetTop + section.offsetHeight){
+      document.querySelectorAll('.navlinks a').forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('href') === '#' + section.id) link.classList.add('active');
+      });
+    }
+  });
+});
+const menuBtn = document.getElementById('menuBtn');
+const navLinksContainer = document.querySelector('.navlinks');
+
+menuBtn.addEventListener('click', () => {
+  navLinksContainer.classList.toggle('active'); 
+});
 

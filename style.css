@@ -10,6 +10,79 @@ body {
   color: #333;
   line-height: 1.6;
 }
+
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: #ff6f91;
+}
+
+.dark-mode-btn {
+  font-size: 20px;
+  background: #ff6f91;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navlinks.active {
+    display: flex;
+  }
+}
+
+
+body.dark-mode {
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar {
+  background: #222;
+  box-shadow: 0 2px 4px #555;
+}
+
+
+body.dark-mode .intro h3,
+body.dark-mode .about-me-section ,
+body.dark-mode .about-me-text,
+body.dark-mode .skills ,
+body.dark-mode .projects,
+body.dark-mode .experience-cards,
+body.dark-mode .contact-section ,
+body.dark-mode .contact-list, 
+body.dark-mode .footer {
+  background: #222;
+  color: #f0f0f0;
+
+}
+
+
+body.dark-mode .btn,
+body.dark-mode .dark-mode-btn {
+  background: #ff6f91;
+  color: white;
+}
+
 .navbar {
   background: #ffdde1;
   padding: 15px 30px;
@@ -21,7 +94,6 @@ body {
 }
 
 .logo {
- 
   font-family: "Engagement", cursive;
   font-style: normal;
   font-size: 20px;
@@ -30,8 +102,6 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
   margin-right: 40px;
-
-  
 }
 
 
@@ -339,6 +409,9 @@ input{
     padding: 50px 20px;
     text-align: center;
     color: #333333bf;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: #ff6f91de 0 4px 8px;
 }
 .contact-section h2{
     color: #ff6f91;
@@ -352,6 +425,7 @@ input{
     padding: 20px;
     border-radius: 30px;
     box-shadow: #ff6f91de 0 4px 8px;
+    margin-top: 20px;
 }
 .contact-list{
    list-style: none;
@@ -377,6 +451,7 @@ input{
   opacity: 0;               
   transform: translateY(20px); 
   transition: opacity 0.8s ease, transform 0.8s ease; 
+ 
 }
 
 .fade-in.show {
@@ -396,6 +471,7 @@ footer{
 footer img{
     width: 20px;
     height: 20px;
+   
     
 }
 footer img:hover {
