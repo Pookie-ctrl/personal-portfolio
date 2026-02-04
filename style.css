@@ -32,23 +32,7 @@ body {
   margin-left: 10px;
 }
 
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
 
-  .navlinks {
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navlinks.active {
-    display: flex;
-  }
-}
 
 
 body.dark-mode {
@@ -74,6 +58,14 @@ body.dark-mode .footer {
   background: #222;
   color: #f0f0f0;
 
+}
+
+body.dark-mode .navlinks li{
+  background: #ff6f91;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 
@@ -494,11 +486,21 @@ footer div{
     width: 100%;
   }
 
-  .navlinks ul {
-    justify-content: center;
+  .navlinks {
+    display: none;
+    flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
   }
+  .navlinks.active {
+    display: flex;
+  }
+  
+  .menu-btn {
+    display: block;
+  }
+
 
   .intro-section {
     grid-template-columns: 1fr;
@@ -517,4 +519,8 @@ footer div{
     gap: 30px;
    
     }
+
+
+  
 }
+
