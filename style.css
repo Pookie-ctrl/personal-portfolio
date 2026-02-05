@@ -4,11 +4,16 @@
   box-sizing: border-box;
   
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff6f9;
   color: #333;
   line-height: 1.6;
+  padding-top: 80px;
 }
 
 .menu-btn {
@@ -82,6 +87,11 @@ body.dark-mode .dark-mode-btn {
   align-items: center;
   box-shadow: 0 2px 4px  #ff6f91de;
   flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
 
 }
 
@@ -117,7 +127,6 @@ body.dark-mode .dark-mode-btn {
   list-style: none;
   padding: 0;
   margin: 0;
-  position: fixed;
 }
 
 .navbar li:hover a {
@@ -142,6 +151,10 @@ body.dark-mode .dark-mode-btn {
   border-radius: 10px 0px 10px 0px;
   box-shadow: 0 2px 4px  #ff6f91de;
 }
+section {
+  scroll-margin-top: 100px; 
+}
+
 
 .page-wrapper {
   max-width: 1200px;
@@ -497,13 +510,30 @@ footer div{
 
   .navlinks {
     display: none;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 20px;
-    width: 100%;
     text-align: center;
+    background:  #ffdde152;
+    position: fixed;   
+    top: 70px;
+    left: 0;         
+    height: 100%;     
+    width: 200px;     
+    padding: 10px;
+    box-shadow: 2px 0 5px  #ff6f91de;
+    z-index: 0;
   }
+  .navlinks ul{
+    flex-direction: column;
+   margin-top: 0;
+    
+    
+    
+  }
+
   .navlinks.active {
     display: flex;
+   
     
   }
   
