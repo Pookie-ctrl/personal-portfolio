@@ -80,6 +80,11 @@ body.dark-mode .dark-mode-btn {
   color: white;
 }
 
+body.dark-mode .navlinks{
+  background: #11111188;
+  
+}
+
 .navbar {
   background: #ffdde1;
   padding: 15px 30px;
@@ -501,6 +506,8 @@ footer div{
   .navbar {
     justify-content: center;
     gap: 10px;
+   
+   
   }
 
   .navlinks {
@@ -511,21 +518,21 @@ footer div{
   .navlinks {
     display: none;
     flex-direction: column-reverse;
-    gap: 20px;
+    justify-content: start;
     text-align: center;
-    background:  #ffdde152;
+    background:  #ffdde1cb;
     position: fixed;   
-    top: 70px;
-    left: 0;         
+    top: 79px;
+    right: 0;         
     height: 100%;     
     width: 200px;     
-    padding: 10px;
     box-shadow: 2px 0 5px  #ff6f91de;
     z-index: 0;
+  
   }
   .navlinks ul{
     flex-direction: column;
-   margin-top: 0;
+    
     
     
     
